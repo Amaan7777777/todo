@@ -1,0 +1,54 @@
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(21, 173, 179, 0.09);
+  overflow: hidden;
+  margin: 1.5rem 0;
+  font-size: 1.06rem;
+}
+th,
+td {
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+th {
+  background: #eaf7f8;
+  color: #15adb3;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 1.07rem;
+}
+tr:not(:last-child) {
+  border-bottom: 1.5px solid #eaf7f8;
+}
+tr:nth-child(even) td {
+  background: #f5fcfc;
+}
+.editBtn,
+.deleteBtn {
+  font-size: 1.01rem;
+  margin-right: 0.7rem;
+  border: none;
+  border-radius: 7px;
+  padding: 0.44rem 1.18rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.16s, color 0.16s;
+}
+.editBtn {
+  background: #15adb3;
+  color: #fff;
+}
+.editBtn:hover {
+  background: #128388;
+}
+.deleteBtn {
+  background: #e34549;
+  color: #fff;
+}
+.deleteBtn:hover {
+  background: #bd2229;
+}

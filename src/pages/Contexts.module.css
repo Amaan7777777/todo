@@ -1,0 +1,143 @@
+.container {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 700px;
+  margin: 32px auto;
+  box-shadow: 0 8px 36px rgba(32, 68, 91, 0.08),
+    0 2px 4px rgba(44, 56, 74, 0.08);
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #22323e;
+  margin-bottom: 2.5rem;
+}
+
+.inputRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.3rem;
+}
+
+.input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #c5e1e8;
+  font-size: 1.15rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.input:focus {
+  border: 1.5px solid #36b3cb;
+}
+
+.addBtn {
+  background: #3fb0c9;
+  color: #fff;
+  font-size: 1.12rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 36px;
+  cursor: pointer;
+  transition: background 0.17s;
+}
+
+.addBtn:hover {
+  background: #2596a5;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 18px 0 18px 0;
+  border-bottom: 1px solid #eee;
+  gap: 0;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+.label {
+  min-width: 85px;
+  font-size: 1.15rem;
+  color: #233e50;
+  font-weight: 500;
+  flex-shrink: 0;
+  margin-right: 36px;
+}
+
+.editBtn,
+.cancelBtn {
+  background: #6ac2fa;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 22px;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.17s;
+  margin-top: 0;
+}
+
+.editBtn:hover,
+.cancelBtn:hover {
+  background: #349fd9;
+}
+
+.deleteBtn {
+  background: #e15251;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.17s;
+}
+
+.deleteBtn:hover {
+  background: #bf3130;
+}
+
+/* Modal styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 12px 48px rgba(44, 56, 74, 0.14);
+  padding: 2.2rem 2.5rem 1.5rem 2.5rem;
+  min-width: 310px;
+  text-align: center;
+}
+
+.modal button {
+  margin: 24px 8px 0 8px;
+}

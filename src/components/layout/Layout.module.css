@@ -1,0 +1,86 @@
+/* src/components/layout/Layout.module.css */
+
+.sidebar {
+  background: #38b7be;
+  color: #fff;
+  min-width: 250px;
+  max-width: 260px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px 18px 16px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.userInfo {
+  margin-bottom: 18px;
+}
+
+.sidebarDivider {
+  margin: 18px 0 18px 0;
+  border: none;
+  border-top: 1.2px solid #e8f2f7;
+  width: 96%;
+  align-self: center;
+}
+
+.sidebarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebarLink {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.14rem;
+  padding: 12px 12px;
+  border-radius: 7px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.12s;
+  margin-bottom: 1px;
+}
+
+.sidebarLink:hover,
+.active {
+  background: #15adb3;
+  color: #fff;
+  font-weight: bold;
+}
+
+.logoutBtn {
+  margin-top: 36px;
+  width: 95%;
+  background: linear-gradient(90deg, #15adb3 60%, #1796a6 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  cursor: pointer;
+  align-self: flex-end;
+  box-shadow: 0 1px 6px rgba(21, 173, 179, 0.08);
+  transition: box-shadow 0.13s;
+}
+
+.logoutBtn:hover {
+  box-shadow: 0 2px 14px rgba(21, 173, 179, 0.12);
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    min-width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    flex-direction: row;
+    padding: 12px;
+    position: static;
+  }
+  .sidebarDivider {
+    display: none;
+  }
+}

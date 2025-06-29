@@ -1,0 +1,243 @@
+.tableContainer {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(21, 173, 179, 0.08);
+  overflow: hidden;
+  margin: 1.5rem 0;
+  border: 1px solid #e8f2f3;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.95rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.table th,
+.table td {
+  padding: 1rem 0.8rem;
+  text-align: left;
+  border-right: 1px solid #f0f8f9;
+  vertical-align: middle;
+  position: relative;
+}
+
+.table th:last-child,
+.table td:last-child {
+  border-right: none;
+}
+
+.table th {
+  background: linear-gradient(135deg, #15adb3 0%, #1796a6 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: none;
+}
+
+.table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* Excel-style alternating rows */
+.row {
+  transition: all 0.15s ease;
+  background: #fff;
+  border-bottom: 1px solid #f0f8f9;
+}
+
+.row:nth-child(even) {
+  background: #fafcfc; /* Light gray for even rows */
+}
+
+.row:hover {
+  background: #e8f6f7 !important; /* Hover color overrides even/odd */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(21, 173, 179, 0.12);
+}
+
+.details {
+  max-width: 280px;
+  word-wrap: break-word;
+  line-height: 1.4;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.contextBadge {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #1565c0;
+  padding: 0.35rem 0.8rem;
+  border-radius: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid #90caf9;
+  text-align: center;
+  min-width: 50px;
+}
+
+.priorityBadge,
+.statusBadge {
+  color: #fff;
+  padding: 0.35rem 0.8rem;
+  border-radius: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 65px;
+  text-align: center;
+}
+
+.viewBtn {
+  background: linear-gradient(135deg, #15adb3 0%, #1796a6 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  box-shadow: 0 2px 6px rgba(21, 173, 179, 0.2);
+}
+
+.viewBtn:hover {
+  background: linear-gradient(135deg, #128388 0%, #0f7580 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 173, 179, 0.3);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #666;
+  font-size: 1.1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(21, 173, 179, 0.08);
+  border: 2px dashed #d4ebee;
+}
+
+.emptyState p {
+  margin: 0;
+  color: #7f8c8d;
+}
+
+/* Better column widths for alignment */
+.table th:nth-child(1),
+.table td:nth-child(1) {
+  width: 8%;
+} /* Date */
+.table th:nth-child(2),
+.table td:nth-child(2) {
+  width: 10%;
+} /* Task From */
+.table th:nth-child(3),
+.table td:nth-child(3) {
+  width: 8%;
+} /* Context */
+.table th:nth-child(4),
+.table td:nth-child(4) {
+  width: 35%;
+} /* Details */
+.table th:nth-child(5),
+.table td:nth-child(5) {
+  width: 9%;
+} /* Due Date */
+.table th:nth-child(6),
+.table td:nth-child(6) {
+  width: 9%;
+} /* Priority */
+.table th:nth-child(7),
+.table td:nth-child(7) {
+  width: 10%;
+} /* Status */
+.table th:nth-child(8),
+.table td:nth-child(8) {
+  width: 8%;
+} /* Assigned To */
+.table th:nth-child(9),
+.table td:nth-child(9) {
+  width: 3%;
+} /* View */
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .table th,
+  .table td {
+    padding: 0.8rem 0.6rem;
+  }
+
+  .details {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .details {
+    max-width: 150px;
+  }
+
+  .contextBadge,
+  .priorityBadge,
+  .statusBadge {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    min-width: 45px;
+  }
+
+  .viewBtn {
+    padding: 0.4rem;
+    font-size: 1rem;
+    min-width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tableContainer {
+    border-radius: 8px;
+  }
+
+  .table th {
+    font-size: 0.75rem;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .table td {
+    padding: 0.6rem 0.4rem;
+  }
+
+  .details {
+    max-width: 120px;
+    font-size: 0.8rem;
+  }
+}
